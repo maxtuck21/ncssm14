@@ -1,0 +1,3 @@
+Symbol,Prices Outcome,Prices Message,Prices Date,Prices Open,Prices High,Prices Low,Prices Close,Prices LastSale,Prices Volume,Outcome,Message,Identity,Delay
+,,,,,,,,,,RequestError,"Maximum time range for any number of symbols exceeded. Requests cannot span more than a one-month range
+Invalid Symbols",Cookie,0.0156048

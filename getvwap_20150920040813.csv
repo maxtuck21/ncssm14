@@ -1,0 +1,2 @@
+Symbol,StartDateTime,EndDateTime,TWAP,Trades,VWAP,Volume,Outcome,Message,Identity,Delay
+,,,0,0,0,0,RequestError,Maximum time range for any number of symbols exceeded. Requests cannot span more than a one-month range,Cookie,0.0155993

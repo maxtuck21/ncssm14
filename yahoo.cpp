@@ -1,0 +1,4 @@
+public void Start() { string url = "http://finance.yahoo.com/d/quotes.csv?s=MSFT+GOOG&f=snl1d1t1ohgdr"; //Get page showing the table with the chosen indices 
+HttpWebRequest request = null; IDatabase database = DatabaseFactory.CreateDatabase( DatabaseFactory.DatabaseType.SQLite); //csv content 
+try { while (true) { using (Stream file = File.Create("quotes.csv")) { request = (HttpWebRequest)WebRequest.CreateDefault(new Uri(url)); request.Timeout = 30000; using (var response = (HttpWebResponse)request.GetResponse()) using (Stream input = response.GetResponseStream()) { CopyStream(input, file); } } Console.WriteLine("------------------------------------------------"); database.InsertData(Directory.GetCurrentDirectory() + "/quotes.csv"); File.Delete("quotes.csv"); Thread.Sleep(10000); // 10 seconds 
+} } catch (Exception exc) { Console.WriteLine(exc.ToString()); Console.ReadKey(); } }
